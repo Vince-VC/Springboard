@@ -246,6 +246,7 @@ SELECT
 FROM Members AS m
 LEFT JOIN Members AS r
 ON m.recommendedby = r.memid
+WHERE member_lastname_firstname NOT LIKE '%GUEST%'
 ORDER BY member_lastname_firstname;
 
 
